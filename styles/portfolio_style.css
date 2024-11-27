@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: url("../background-img.jpg") no-repeat center center fixed;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* side-bar */
+.sidebar-container {
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  position: fixed;
+  width: 180px;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.sidebar_options li {
+  list-style: none;
+  color: #fff;
+  
+}
+
+.sidebar_options {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  font-size: 22px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  margin-bottom: 5px 0;
+  box-shadow: 0px 1px 2px transparent;
+  transition: box-shadow 0.25s;
+}
+
+.sidebar_options:hover {
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 25px;
+  box-shadow: 0 3px 5px rgb(128, 128, 128);
+}
+
+section {
+  margin: 50px 0;
+}
+
+/* Home section */
+
+.content {
+  position: absolute;
+  left: 180px;
+}
+
+#Home {
+  width: 80vw;
+  height: 100vh;
+}
+
+.page_header {
+  display: flex;
+  justify-content: center;
+}
+
+.page_header h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+#Home-container {
+  position: relative;
+  top: 150px;
+  left: 50px;
+}
+
+
+.dev-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.dev-info-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  align-items: last baseline;
+}
+
+.dev-img-container .bx {
+  font-size: 150px;
+}
+
+.dev_intro {
+  font-size: 18px;
+}
+
+.hello,
+.name {
+  font-size: 35px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+.name {
+  font-size: 60px;
+  padding-left: 12px;
+}
+
+/* Intro section */
+
+section {
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.about {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.about_more {
+  display: none;
+
+}
+
+@media (min-width: 700px) {
+  .about{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: horizontal;
+    overflow: hidden;
+  }
+}
+
+/* Skills section */
+
+.skill_container {
+  width: 80vw;
+  padding: 10px 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.skill_container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill_container ul li {
+  list-style: none;
+  font-family: "Roboto";
+  padding: 5px;
+}
+
+.icon-img {
+  width: 70px;
+  height: 30px;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  color: white;
+  margin-right: 5px;
+  background-color: #cf0101;
+  transition: none;
+}
+
+.btn a {
+  color: white;
+}
+
+.btn:hover {
+  background-color: #ff1313;
+  cursor: pointer;
+}
+
+
+.contact-me form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(172, 17, 243);
+  color: #fff;
+}
+
+.Input-box{
+  position: relative;
+  height: 50px;
+  margin: 40px 0;
+}
+
+.Input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid blueviolet;
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 20px 45px 20px 20px;
+}
+
+.Input-box label{
+  padding: 10px;
+  color: #fff;
+  margin: 2px;
+}
+
+.Input-box input::placeholder{
+  font-size: 15px;
+  color: #fff;
+}
+
+.privacy-promise{
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.Input-box i{
+  position: absolute;
+  right: 15px;
+  top: 100%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.box{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.box input{
+  margin-left: 12px;
+  width: 15px;
+  height: 15px;
+}
+
+/*  footer  */
+footer {
+  height: 200px;
+}
