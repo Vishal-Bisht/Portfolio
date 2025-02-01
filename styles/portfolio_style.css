@@ -7,7 +7,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-:root {
+:root {                           /*used for the light and dark theme toggler*/
   --primary-color: white;
   --primary-label: black;
   --secondary-label: white;
@@ -46,9 +46,18 @@ a {
   width: 100%;
 }
 
-.icon {
+.ham-icon {
+  display: none;
+  margin-left: 20px ;
   width: 35px;
   height: 30px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.ham-icon:hover {
+  cursor: pointer;
+  border-color: black;
 }
 
 .right-section {
@@ -88,7 +97,7 @@ a {
   height: 2px;
   background: #000000;
   transform: scale(0);
-  transition: all 1s ease-in;
+  transition: all 0.5s;
   transform-origin: left;
 }
 
@@ -101,8 +110,16 @@ a {
   height: 2px;
   background: #000000;
   transform: scale(0);
-  transition: all 1s ease-in;
+  transition: all 0.5s;
   transform-origin: right;
+}
+
+body.dark-mode .option::before {
+  background: #ffffff;
+}
+
+body.dark-mode .option::after {
+  background: #ffffff;
 }
 
 .option:hover:before, 
@@ -127,7 +144,7 @@ a {
   /* z-index: 100; */
 }
 
-label {
+.toggle label {
   display: block;
   width: 55px;
   height: 28px;
@@ -139,7 +156,7 @@ label {
   box-shadow: 1px 2px 3px black;
 }
 
-label::after {
+.toggle label::after {
   content: "";
   width: 20px;
   height: 20px;
@@ -161,10 +178,16 @@ label::after {
   background-color: var(--secondary-label);
 }
 
-label:active:after {
+.toggle label:active:after {
   width: 55px;
 }
 /* Home section */
+
+/* .content {
+  background: url(../images/background-img.jpg) no-repeat;
+  object-fit: cover;
+  background-size: 100%;
+} */
 
 #Home {
   height: 100vh;
@@ -301,6 +324,7 @@ label:active:after {
 }
 
 #Skills h2 {
+  font-size: 32px;
   padding: 10px 0;
 }
 
@@ -329,7 +353,7 @@ label:active:after {
 
 .skill_container::before {
   content: "";
-  width: 100px;
+  width: 50px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -340,7 +364,7 @@ label:active:after {
 
 .skill_container::after {
   content: "";
-  width: 100px;
+  width: 50px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -363,7 +387,7 @@ label:active:after {
 /* Projects section */
 
 #Projects {
-  padding: 40px;
+  padding: 10px;
 }
 
 #Projects h1{
@@ -375,30 +399,129 @@ label:active:after {
 }
 
 .project-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .project {
   display: flex;
+  width: 400px;
+  height: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   border: 1px solid grey;
   border-radius: 15px;
-  padding: 10px;
+  box-shadow: 1px 1px 5px grey;
+
 }
 
-.project h2 {
-  padding: 10px;
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 5px;
 }
 
 .project img {
-  height: 15rem;
-  margin: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
+.project-info {
+  margin: 8px 0;
+}
+
+.project-info h2 {
+  text-align: center;
+}
+
+#project-tag {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+#project-tag li {
+  list-style: none;
+  font-size: 13px;
+  margin-right: 15px;
+  padding: 3px 8px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+/* Contact section */
+
+#Contact_me {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Contact_me h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+#Contact_me form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+#Contact_me form label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+#Contact_me form input {
+  width: 20rem;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+#Contact_me form textarea {
+  width: 20rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+#Contact_me form button {
+  width: 10rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  transition: none;
+}
+
+
+.contact_links {
+  margin-bottom: 20px;
+}
+
+.contact_links i {
+  font-size: 3rem;
+  margin: 0 1rem;
+}
 
 
 /* general section */
@@ -420,9 +543,4 @@ label:active:after {
 .btn:hover {
   background-color: #ff1313;
   cursor: pointer;
-}
-
-/*  footer  */
-footer {
-  height: 200px;
 }

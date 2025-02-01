@@ -21,7 +21,7 @@
     <div class="main">
       <div class="navbar">
         <div class="left-section">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+          <svg class="ham-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
             <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">
             </path>
           </svg>
@@ -164,39 +164,62 @@
           <h1>Projects</h1>
           <div class="project-container">
             <div class="project">
-              <h2>Amazon clone</h2>
               <div class="project-img">
-                <img src="./images/amazon-clone.png" alt="amazon clone">
+                <img src="./images/amazon-clone.png" alt="Amazon Clone">
               </div>
-              <div class="project-description">
-                <p>The Amazon clone project involved building a user-friendly e-commerce interface using HTML, CSS, and JavaScript. It helped me learn essential front-end skills, like structuring layouts, styling with CSS, and enhancing user experience through intuitive navigation. By implementing features like a search bar and responsive design, I applied my knowledge practically.
-
-                  Though I didn’t delve into back-end development, I gained insights into how it supports front-end functionality, especially regarding data management and API interactions. Overall, this project showcased my understanding of web development principles and sparked my interest in further exploring back-end technologies.</p>
-              </div>
-              <div class="project-link">
-                <a href="">check it here</a>
+              <div class="project-info">
+                <h2>Amazon Clone</h2>
+              <ul id="project-tag">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>javascript</li>
+              </ul>
               </div>
             </div>
             <div class="project">
-              <h2>Amazon clone</h2>
               <div class="project-img">
-                <img src="./images/amazon-clone.png" alt="amazon clone">
+                <img src="./images/my-portfolio.png" alt="My Portfolio">
               </div>
-              <div class="project-description">
-                <p>The Amazon clone project involved building a user-friendly e-commerce interface using HTML, CSS, and JavaScript. It helped me learn essential front-end skills, like structuring layouts, styling with CSS, and enhancing user experience through intuitive navigation. By implementing features like a search bar and responsive design, I applied my knowledge practically.
-
-                  Though I didn’t delve into back-end development, I gained insights into how it supports front-end functionality, especially regarding data management and API interactions. Overall, this project showcased my understanding of web development principles and sparked my interest in further exploring back-end technologies.</p>
-              </div>
-              <div class="project-link">
-                <a href="">check it here</a>
+              <div class="project-info">
+                <h2>My Portfolio</h2>
+              <ul id="project-tag">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>javascript</li>
+              </ul>
               </div>
             </div>
-          </div>
-
-
+            <div class="project">
+              <div class="project-img">
+                <img src="./images/amazon-clone.png" alt="Amazon Clone">
+              </div>
+              <div class="project-info">
+                <h2>Amazon Clone</h2>
+              <ul id="project-tag">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>javascript</li>
+              </ul>
+              </div>
+            </div>
         </section>
         <section id="Contact_me">
           <h1>Contact me</h1>
+          <form >
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+            <button type="submit" class="btn btn_submit">Submit</button>
+          </form>
+          <div class="contact_links">
+          <a href="https://github.com/Vishal-Bisht" target="#"><i class="devicon-github-original-wordmark"></i></a>
+          <a href="linkedin.com/in/vishal-bist-4a5238261" target="#"><i class="devicon-linkedin-plain"></i></a>
+          <a href="" target="#"></a><i class="devicon-twitter-original"></i>
+          <a href="linkedin.com/in/vishal-bist-4a5238261" target="#"></a><i class="devicon-facebook-plain"></i>
+          </div>
         </section>
 
         <script src="scripts/main.js"></script>
