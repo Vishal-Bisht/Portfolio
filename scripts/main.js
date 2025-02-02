@@ -36,16 +36,17 @@ const toggler = document.getElementById('switch');
 const links = document.querySelectorAll('.nav-opt');
 const icon = document.querySelector('.icon');
 const skillContainer = document.querySelector('.skill_container');
-const bgcolor = '#1d1a1a';
+const bgcolor1 = '#1d1a1a';
+const bgcolor2 = '#f5f5f5';
 
 toggler.addEventListener("click", ()=>{
   if (toggler.checked === true) {
-    document.body.style.backgroundColor = bgcolor;
+    document.body.style.backgroundColor = bgcolor1;
     document.body.style.color = "white";
     document.body.classList.add('dark-mode');
     links.forEach(link => link.style.color = "white"); 
     icon.style.fill = "white";
-    SkillContainerBackground(bgcolor);
+    SkillContainerBackground(bgcolor1);
 
 } else {
     document.body.style.backgroundColor = "white";
@@ -53,7 +54,7 @@ toggler.addEventListener("click", ()=>{
     document.body.classList.remove('dark-mode');
     links.forEach(link => link.style.color = "black");
     icon.style.fill = "black";
-    SkillContainerBackground("#f5f5f5");
+    SkillContainerBackground(bgcolor2);
 
 }
 });
