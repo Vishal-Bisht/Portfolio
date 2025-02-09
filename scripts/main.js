@@ -11,50 +11,27 @@ document.querySelector('.read_more_btn').addEventListener('click', function() {
     );
   });
 
-// skills scroll animation
-  function SkillContainerBackground(Color) {
-    let style = document.querySelector('#skillContainerStyle');
-    
-    if (!style) {
-        style = document.createElement('style');
-        style.id = 'skillContainerStyle';
-        document.head.appendChild(style);
-    }
-    style.innerHTML = `
-        .skill_container::before {
-            background: linear-gradient(to left, transparent, ${Color});
-        }
-        .skill_container::after {
-            background: linear-gradient(to right, transparent, ${Color});
-        }
-    `;
-}
-
 // Toggle button  
 
 const toggler = document.getElementById('switch');
 const links = document.querySelectorAll('.nav-opt');
 const icon = document.querySelector('.icon');
-const skillContainer = document.querySelector('.skill_container');
 const bgcolor1 = '#1d1a1a';
 const bgcolor2 = '#f5f5f5';
 
 toggler.addEventListener("click", ()=>{
   if (toggler.checked === true) {
     document.body.style.backgroundColor = bgcolor1;
-    document.body.style.color = "white";
+    document.body.style.color = "#ffffff";
     document.body.classList.add('dark-mode');
-    links.forEach(link => link.style.color = "white"); 
-    icon.style.fill = "white";
-    SkillContainerBackground(bgcolor1);
+    links.forEach(link => link.style.color = "#ffffff"); 
+    icon.style.fill = "#ffffff";
 
 } else {
-    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundColor = "#ffffff";
     document.body.style.color = "#1d1a1a";
     document.body.classList.remove('dark-mode');
-    links.forEach(link => link.style.color = "black");
-    icon.style.fill = "black";
-    SkillContainerBackground(bgcolor2);
-
+    links.forEach(link => link.style.color = "#000000");
+    icon.style.fill = "#000000";
 }
 });
