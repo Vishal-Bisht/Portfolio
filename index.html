@@ -21,13 +21,12 @@
     <div class="main">
       <div class="navbar">
         <div class="left-section">
-          <svg class="ham-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
-            <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">
-            </path>
-          </svg>
+          <div class="logo">
+            <img src="images/Logo.png" alt="Vishal Bisht" />
+          </div>
         </div>
         <div class="right-section">
-          <ul>
+          <ul class="nav-links">
             <a href="#Home">
               <div class="option">
                 <li class="nav-opt">Home</li>
@@ -59,6 +58,12 @@
               </div>
             </a>
           </ul>
+          <div class="ham-icon-container">
+            <svg class="ham-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
+              <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+              </path>
+            </svg>
+          </div>
           <div class="toggle">
             <input type="checkbox" id="switch">
             <label for="switch"></label>
@@ -66,7 +71,7 @@
         </div>
       </div>
       <div class="content">
-        <section id="Home">
+        <section id="Home" class="fade-in">
           <div class="header-text">
             <h1>
               I'm a <span class="typed-text"></span>
@@ -95,7 +100,7 @@
             </div>
           </div>
         </section>
-        <section id="Intro">
+        <section id="Intro" class="fade-in">
           <div class="About-container">
             <div class="my-img-container">
               <img src="./images/my_image.jpeg" alt="Vishal Bist">
@@ -103,27 +108,18 @@
             <span class="about">I am a CSE(computer science & engineering) student currently in my 3rd
               year. i'm doing my bachelor's from University of Lucknow. I am very passionate about
               coding, programming and web development.</span>
-            <span class="about_more" style="display: none;">Hey there, I'm Vishal Bist, a third-year Computer Science
+            <span class="about_more" style="display: none;">Hey there, I'm Vishal Bist, a third-year Computer Science & 
               Engineering student. From the get-go, I've been obsessed with all
-              things programming and software development. It's like a puzzle to
-              me—always challenging, always rewarding.
-              Whether it's C, C++, I'm in my element. But it's not
-              just about knowing the syntax for me. I dive deep into Data
-              Structures and Algorithms, constantly honing my skills to build
-              solutions that are not just functional but elegant too.<br />
-
-              And then there's web development. That's where I get to flex my
-              creative muscles. I love weaving together front-end and back-end
-              technologies to create seamless user experiences. It's like
-              painting with code. So yeah, you could say I'm pretty passionate
-              about this stuff. And I can't wait to see where this journey takes
-              me.</span>
+              things programming and software development.<br />
+              Currently, I am diving deep into Data Structures and Algorithms (DSA) in C++ and learning new front-end libraries like react. Alongside my academic pursuits, I'm also working on some front-end projects, showcasing my skills in HTML, CSS, and JavaScript. I am always eager to learn and take on new challenges in the tech world.<br />
+              When I'm not coding, you can find me cooking up a storm in the kitchen or jamming to my favorite tunes or in the gym.<br />
+              </span>
               <div>
                 <button class="btn read_more_btn">Read more</button>
               </div>
           </div>
         </section>
-        <section id="Skills">
+        <section id="Skills" class="fade-in">
             <h2>My Skills</h2>
                   <div class="skill_container">
                     <div class="skills-slider">
@@ -160,15 +156,32 @@
                   </div>
                 </div>
         </section>
-        <section id="Projects">
+        <section id="Projects" class="fade-in">
           <h1>Projects</h1>
           <div class="project-container">
             <div class="project">
               <div class="project-img">
-                <img src="./images/amazon-clone.png" alt="Amazon Clone">
+                <img src="./images/palindrome-checker.png" alt="Palindrome Checker">
               </div>
               <div class="project-info">
-                <h2>Amazon Clone</h2>
+                <h2>Palindrome Checker</h2>
+                <p class="about-project">A fully functional palindrome checker websites which allows a user to check if a given string is a palindrome or not.</p><br /><br />
+                👉 [<a href="" target="#">check here</a>]
+              <ul id="project-tag">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>javascript</li>
+              </ul>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-img">
+                <img src="./images/rock-paper-scissors.png" alt="Rock Paper Scissors">
+              </div>
+              <div class="project-info">
+                <h2>Rock Paper Scissors Game</h2>
+                <p class="about-project">A simple rock paper scissors game website.</p><br /><br />
+                👉 [<a href=" https://vishal-bisht.github.io/Rock-Paper-Scissors-Game/" target="#">check here</a>]
               <ul id="project-tag">
                 <li>HTML5</li>
                 <li>CSS3</li>
@@ -182,6 +195,8 @@
               </div>
               <div class="project-info">
                 <h2>My Portfolio</h2>
+                <p class="about-project">A fully functional and responsive portfolio website.</p><br /><br />
+                👉 [<a href="https://vishal-bisht.github.io/Portfolio/" target="#">check here</a>]
               <ul id="project-tag">
                 <li>HTML5</li>
                 <li>CSS3</li>
@@ -195,6 +210,9 @@
               </div>
               <div class="project-info">
                 <h2>Amazon Clone</h2>
+                <p class="about-project">A clone website i created while learning javascript.</p>
+                <br />
+                👉 [<a href="https://vishal-bisht.github.io/Amazon-clone/" target="#">check here</a>]
               <ul id="project-tag">
                 <li>HTML5</li>
                 <li>CSS3</li>
@@ -203,7 +221,7 @@
               </div>
             </div>
         </section>
-        <section id="Contact_me">
+        <section id="Contact_me" class="fade-in">
           <h1>Contact me</h1>
           <form action="https://formsubmit.co/a081cb874e0658b96f5d03864ce7eac6" method="POST">
             <label for="name">Name</label>
@@ -216,20 +234,17 @@
           </form>
           <div class="contact_links">
           <a href="https://github.com/Vishal-Bisht" target="#"><i class="devicon-github-original-wordmark"></i></a>
-          <a href="linkedin.com/in/vishal-bist-4a5238261" target="#"><i class="devicon-linkedin-plain"></i></a>
-          <a href="linkedin.com/in/vishal-bist-4a5238261" target="#"></a><i class="devicon-twitter-original"></i>
-          <a href="linkedin.com/in/vishal-bist-4a5238261" target="#"></a><i class="devicon-facebook-plain"></i>
+          <a href="https://linkedin.com/in/vishal-bist-4a5238261" target="#"><i class="devicon-linkedin-plain"></i></a>
+          <a href="https://linkedin.com/in/vishal-bist-4a5238261" target="#"><i class="devicon-twitter-original"></i></a>
+          <a href="https://linkedin.com/in/vishal-bist-4a5238261" target="#"><i class="devicon-facebook-plain"></i></a>
           </div>
         </section>
-
+        <footer>
+          <p>&copy; 2025 Vishal Bist. All rights reserved.</p>
+        </footer>
         <script src="scripts/main.js"></script>
         <script src="scripts/type_effect.js"></script>
       </div>
     </div>
   </body>
 </html>
-
-<!-- I am a CSE(computer science & engineering) student currently in my 3rd
-                        year.I am currently living in lucknow as i'm doing my bachelor's from University of Lucknow. I am native of Uttarakhand and my family lives in greater noida. I am very passionate about coding, programming languages and web development.
-                        Currently i'm learning DSA(data structure and algorithm) in C++ and Web development. I also like
-                        cooking and music.  -->

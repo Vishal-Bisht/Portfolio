@@ -11,7 +11,7 @@ document.querySelector('.read_more_btn').addEventListener('click', function() {
     );
   });
 
-// Toggle button  
+// Background color toggle button  
 
 const toggler = document.getElementById('switch');
 const links = document.querySelectorAll('.nav-opt');
@@ -34,4 +34,29 @@ toggler.addEventListener("click", ()=>{
     links.forEach(link => link.style.color = "#000000");
     icon.style.fill = "#000000";
 }
+});
+
+// section fade-in effect
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(section => {
+    observer.observe(section);
+  });
+});
+
+// Navbar scroll effect
+document.addEventListener('DOMContentLoaded', function() {
+  const hamIcon = document.querySelector('.ham-icon-container');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamIcon.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+  });
 });

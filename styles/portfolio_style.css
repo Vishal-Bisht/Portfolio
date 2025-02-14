@@ -15,6 +15,10 @@
   --black-ball: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {  
   overflow-x: hidden;
 }
@@ -44,6 +48,44 @@ a {
 .left-section,
 .right-section {
   width: 100%;
+}
+
+.logo {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    padding: 5px;
+  }
+
+  .logo img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 60%;
+  }
+}
+
+.ham-icon-container {
+  display: none;
+  margin-left: 20px ;
+  width: 35px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 8px;
 }
 
 .ham-icon {
@@ -126,6 +168,40 @@ body.dark-mode .option::after {
 .option:hover:after {
   transform: scaleX(1);
 }
+
+@media (max-width: 768px) {
+  .right-section ul {
+    display: none;
+  }
+
+  .ham-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right-section {
+    grid-template-columns: 1fr;
+  }
+
+  .right-section ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .right-section ul a {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+
 
  /* background color changer */
 
@@ -247,6 +323,29 @@ body.dark-mode .option::after {
   left: 15%;
 }
 
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  .dev-img-container .bx {
+    font-size: 100px;
+  }
+
+  .hello,
+  .name {
+    font-size: 25px;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+  .main-buttons {
+    left: 10%;
+  }
+}
+
 /* Intro section */
 
 #Intro {
@@ -310,6 +409,31 @@ body.dark-mode .option::after {
 .read_more_btn  {
   position: relative;
   left:45%;
+}
+
+@media (max-width: 768px) {
+  #Intro {
+    padding: 1rem 2rem;
+  }
+
+  .About-container {
+    width: 100%;
+    padding: 5rem 2rem 1rem 2rem;
+  }
+
+  .my-img-container img {
+    width: 150px;
+  }
+
+  .about {
+    width: 100%;
+    padding: 10px 5%;
+    margin: 0 5%;
+  }
+
+  .read_more_btn {
+    left: 40%;
+  }
 }
 
 /* Skills section */
@@ -391,6 +515,16 @@ body.dark-mode .skill_container::after {
   }
 }
 
+@media (max-width: 768px) {
+  .skill-img {
+    height: 40px;
+    margin: 0 20px;
+  }
+
+  .skill_container {
+    padding: 20px 0;
+  }
+}
 
 /* Projects section */
 
@@ -416,15 +550,14 @@ body.dark-mode .skill_container::after {
 }
 
 .project {
-  display: flex;
   width: 400px;
-  height: 100%;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border: 1px solid grey;
   border-radius: 15px;
   box-shadow: 1px 1px 5px grey;
-
+  padding: 0 5px;
 }
 
 .project-img {
@@ -438,6 +571,31 @@ body.dark-mode .skill_container::after {
   height: auto;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.project-info {
+  margin-bottom: 4px;
+}
+
+.about-project {
+  height: 100px;
+}
+
+.project {
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.1);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
 }
 
 .project-info {
@@ -463,6 +621,22 @@ body.dark-mode .skill_container::after {
   padding: 3px 8px;
   border: 1px solid grey;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 100%;
+  }
+
+  .project-info h2 {
+    font-size: 18px;
+  }
+
+  #project-tag li {
+    font-size: 11px;
+    margin-right: 10px;
+    padding: 2px 6px;
+  }
 }
 
 /* Contact section */
@@ -531,6 +705,17 @@ body.dark-mode .skill_container::after {
   margin: 0 1rem;
 }
 
+@media (max-width: 768px) {
+  #Contact_me form input,
+  #Contact_me form textarea {
+    width: 100%;
+  }
+
+  .contact_links i {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+  }
+}
 
 /* general section */
 
@@ -551,4 +736,53 @@ body.dark-mode .skill_container::after {
 .btn:hover {
   background-color: #ff1313;
   cursor: pointer;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #ff1313;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  footer .social-icons a {
+    font-size: 18px;
+    margin: 0 8px;
+  }
 }
